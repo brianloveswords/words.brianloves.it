@@ -14,3 +14,10 @@ A simple workaround is to add `d ''` to the end, which will make curl
 automatically set a Content-Length header of 0. This is annoying.
 
 Some people believe this is nginx being too strict [[ link to those people here ]].
+
+    testing
+    a
+    block
+    code
+    sample
+
