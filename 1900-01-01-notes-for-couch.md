@@ -23,4 +23,7 @@ hovered around 3.0 for several hours.
 
 <img src="http://cl.ly/2W1d2b30043r1L3q0z0c/Screen_shot_2011-01-17_at_5.54.05_PM.png" title='Not good' alt='Screenshot of the emails linode was sending me'>
 
-This is a problem.
+There is more than likely something horribly wrong in the way I set upcouch or
+there could be some strangeness with the nginx proxying. But even when I
+created a database at [CouchOne ](http://couchone.com) the test suite didn't
+come up clean (though it fared way better).
