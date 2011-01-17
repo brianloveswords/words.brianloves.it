@@ -21,6 +21,6 @@ I built couch (v1.0.1) from source. When I ran the test suite, things did not
 go so well. Pretty much every test failed and the load on my tiny Linode 512
 hovered around 3.0 for several hours.
 
-<img src='http://cl.ly/2W1d2b30043r1L3q0z0c' title='Not good' alt='Screenshot of the emails linode was sending me'>
+<img src="http://cl.ly/2W1d2b30043r1L3q0z0c/Screen_shot_2011-01-17_at_5.54.05_PM.png" title='Not good' alt='Screenshot of the emails linode was sending me'>
 
 This is a problem.
