@@ -16,7 +16,7 @@ The syntax is designed to coax you into believing that this function takes three
 
     addThree :: (Num a) => a -> a -> a -> a 
 
-The book probably does a better job of explaining this than I could, but I'll give it a shot. The `(Num a) =>` part is saying ``Any `a` that follows is of the type `Num`''
+The book probably does a better job of explaining this than I could, but I'll give it a shot. The `(Num a) =>` part is saying “Any `a` that follows is of the type `Num`”
 
 ## Better understanding through JavaScript
 
