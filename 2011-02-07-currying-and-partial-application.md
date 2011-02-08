@@ -13,7 +13,7 @@ Let's define a function:
 The syntax is designed to coax you into believing that this function takes three arguments.
 
 
-## Better understanding through JavaScript
+### Better understanding through JavaScript
 
 Here is how you might write this same method in JavaScript, if you didn't realize the syntactic magic going on:
     
