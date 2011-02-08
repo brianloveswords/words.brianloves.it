@@ -15,7 +15,8 @@ Because people deserve recognition for what they do.
 
 *This system is still in its infancy and parts, or all, of the design may
 change*. I'm working on a pilot right now with P2PU.org to see how this system
-works and will write about the results of the
+works and will write about what worked and what didn't after we get the
+results.
 
 The system is designed in three parts. The **issuer** is a site that already
 exists. This site may even already be giving badges. To contribute badges to
