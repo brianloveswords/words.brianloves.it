@@ -1,4 +1,4 @@
-title: Currying
+title: Currying and Partial Application
 date: 2011/02/07
 author: Brian J Brennan
 
@@ -14,7 +14,7 @@ The syntax is designed to coax you into believing that this function takes three
     
     var addThree = function(x, y, z) { return x + y + z; }  //wrong
 
-This doesn't actually capture what's going on underneath. Here's the real equivalent function:
+This doesn't actually capture what's going on underneath. Here's the real (curried) function:
 
     var addThree = function(x) {
       return (function(y) {
@@ -24,4 +24,4 @@ This doesn't actually capture what's going on underneath. Here's the real equiva
       })
     }
 
-Which is just a bit more complex.
+To end up with an integer value, you call would call the curried version like so: `addThree(5)(8)(13) === 26 //true`.
