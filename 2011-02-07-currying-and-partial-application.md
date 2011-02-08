@@ -51,15 +51,13 @@ But you could have a partial application of addThree which returns a function:
     addSixteenTo(112) == 128 //true
 
 ## Bringing it back around
-The example from the book that brought it home for me was this:
+There is an example in [the book](http://learnyouahaskell.com/) that really drove the point home for me. The author describes another way to define the addThree function (`\x -> ...` is the Haskell syntax for a lambda):
 
     addThree = \x -> \y -> \z -> x + y + z
-
-(`\x -> x + 1` would be the Haskell way of writing `(function(x) { return x + 1 })`)
 
 Also, here are two different ways to call addThree:
 
     addThree 3 8 16
     ((addThree 3) 8) 16
 
-Haskell has so much syntactic sugar, it's amazing. While it does make learning the underlying concepts more difficult, it's really joy to play with this language.
+Both of these make it clear that each parameter is really adding another single-parameter function to the chain. Haskell has so much syntactic sugar, it's amazing. While it does occasionally make learning the underlying concepts more difficult, it's really joy to play with this language.
