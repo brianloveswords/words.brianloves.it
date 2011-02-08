@@ -12,7 +12,7 @@ Let's define a function:
     
     addThree x y z = x + y + z
 
-<!--
+<!-- -----------------
 The syntax is designed to coax you into believing that this function takes three arguments. If you checkout the type declaration of the function, there's a hint there:
 
     addThree :: (Num a) => a -> a -> a -> a 
@@ -23,10 +23,11 @@ After that there comes a chain of `a -> a`, which is actually Haskell sugar. It 
 
     addThree :: (Num a) => a -> (a -> ( a -> a) )
 
--->
-## Better understanding through JavaScript
+------------------- -->
 
-Here is how you might write this same method in JavaScript, if you didn't realize the syntactic magic going on:
+
+## Better understanding through JavaScript
+Here's how I would have naïvely implemented the addThree method in JS.
     
     var addThree = function(x, y, z) { return x + y + z }  //wrong
 
@@ -49,17 +50,16 @@ But you could have a partial application of addThree which returns a function:
     var addSixteenTo = addThree(8)(8) //one function left in chain
     addSixteenTo(112) == 128 //true
 
-Let's do another example:
+## Bringing it back around
+The example from the book that brought it home for me was this:
 
-    var plus = function(x) { return (function(y) { return x + y  } ) }
-    
-    // now we can do things like:
-    var inc = plus(1),
-        dec = plus(-1)
-    
-    [1,2,3,4,5].map(inc) // [2,3,4,5,6]
+    addThree = \x -> \y -> \z -> x + y + z
 
+(`\x -> x + 1` would be the Haskell way of writing `(function(x) { return x + 1 })`)
 
+Also, here are two different ways to call addThree:
 
+    addThree 3 8 16
+    ((addThree 3) 8) 16
 
-    
+Haskell has so much syntactic sugar, it's amazing. While it does make learning the underlying concepts more difficult, it's really joy to play with this language.
