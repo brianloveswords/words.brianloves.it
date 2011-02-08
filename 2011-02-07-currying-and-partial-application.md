@@ -10,7 +10,12 @@ Let's define a function:
     
     addThree x y z = x + y + z
 
-The syntax is designed to coax you into believing that this function takes three arguments. Here is how you might write this same method in JavaScript, if you didn't realize the syntactic magic going on:
+The syntax is designed to coax you into believing that this function takes three arguments.
+
+
+Better understanding through JavaScript
+-------------------------------
+Here is how you might write this same method in JavaScript, if you didn't realize the syntactic magic going on:
     
     var addThree = function(x, y, z) { return x + y + z }  //wrong
 
@@ -39,7 +44,8 @@ Let's do another example:
     
     // now we can do things like:
     var inc = plus(1),
-         dec = plus(-1)
+        dec = plus(-1)
+    
     [1,2,3,4,5].map(inc) // [2,3,4,5,6]
 
 
