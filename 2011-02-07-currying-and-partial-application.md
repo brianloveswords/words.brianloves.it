@@ -1,6 +1,8 @@
 title: Currying and Partial Application
 date: 2011/02/07
 author: Brian J Brennan
+tags: javascript haskell currying
+draft: true
 
 I've been learning Haskell from the fantastic online book [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) and there's been a concept that I'm just starting to really wrap my head around.
 
@@ -10,10 +12,11 @@ Let's define a function:
     
     addThree x y z = x + y + z
 
-The syntax is designed to coax you into believing that this function takes three arguments. If you choose to include the type declaration of the function, there's a hint there:
+The syntax is designed to coax you into believing that this function takes three arguments. If you checkout the type declaration of the function, there's a hint there:
 
-<script src="https://gist.github.com/815916.js?file=gistfile1.hs"></script>
+    addThree :: (Num a) => a -> a -> a -> a 
 
+The book probably does a better job of explaining this than I could, but I'll give it a shot. The `(Num a) =>` part is saying ``Any `a` that follows is of the type `Num`''
 
 ## Better understanding through JavaScript
 
@@ -21,7 +24,7 @@ Here is how you might write this same method in JavaScript, if you didn't realiz
     
     var addThree = function(x, y, z) { return x + y + z }  //wrong
 
-This doesn't actually capture what's going on underneath. Here's the real (curried) function:
+This doesn't actually capture what's going on underneath. Here's the actual equivalent function:
 
     var addThree = function(x) {
       return (function(y) {
