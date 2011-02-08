@@ -12,12 +12,18 @@ Let's define a function:
     
     addThree x y z = x + y + z
 
+<!--
 The syntax is designed to coax you into believing that this function takes three arguments. If you checkout the type declaration of the function, there's a hint there:
 
     addThree :: (Num a) => a -> a -> a -> a 
 
-The book probably does a better job of explaining this than I could, but I'll give it a shot. The `(Num a) =>` part is saying “Any `a` that follows is of the type `Num`”
+The book probably does a better job of explaining this than I could, but I'll give it a shot. The `(Num a) =>` part is saying “Any `a` that follows is of the type `Num`”. This part is technically irrelevant, for what I'm explaining, but it's good to know why it's there.
 
+After that there comes a chain of `a -> a`, which is actually Haskell sugar. It should really read
+
+    addThree :: (Num a) => a -> (a -> ( a -> a) )
+
+-->
 ## Better understanding through JavaScript
 
 Here is how you might write this same method in JavaScript, if you didn't realize the syntactic magic going on:
