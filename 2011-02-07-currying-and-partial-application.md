@@ -10,7 +10,9 @@ Let's define a function:
     
     addThree x y z = x + y + z
 
-The syntax is designed to coax you into believing that this function takes three arguments.
+The syntax is designed to coax you into believing that this function takes three arguments. If you choose to include the type declaration of the function, there's a hint there:
+
+<script src="https://gist.github.com/815916.js?file=gistfile1.hs"></script>
 
 
 ## Better understanding through JavaScript
