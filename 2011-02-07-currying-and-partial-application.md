@@ -2,7 +2,6 @@ title: Currying and Partial Application
 date: 2011/02/07
 author: Brian J Brennan
 tags: javascript haskell currying
-draft: true
 
 I've been learning Haskell from the fantastic online book [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) and there's been a concept that I'm just starting to really wrap my head around.
 
