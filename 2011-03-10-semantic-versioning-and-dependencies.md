@@ -2,6 +2,7 @@ title: Semantic Versioning and Dependencies
 date: 2011/03/10
 author: Brian J Brennan
 tags: development node npm versioning
+draft: true
 
 Dependencies management is hell. Inconsistent versioning contributes to the problem; this is why [mojombo](https://github.com/mojombo) formalized [Semantic Versioning](http://semver.org/). It gives meaning to the MAJOR.MINOR.PATCH version system that many (most?) software projects use. Instead of bumping versions because something *feels* like a minor release, or *maybe* it's big enough to be a major release, semver prescribes a set of rules for when to do what.
 
