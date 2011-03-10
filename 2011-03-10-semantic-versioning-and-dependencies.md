@@ -1,8 +1,7 @@
 title: Semantic Versioning and Dependencies
 date: 2011/03/10
 author: Brian J Brennan
-tags: development node npm
-draft: true
+tags: development node npm versioning
 
 Dependencies management is hell. Inconsistent versioning contributes to the problem; this is why [mojombo](https://github.com/mojombo) formalized [Semantic Versioning](http://semver.org/). It gives meaning to the MAJOR.MINOR.PATCH version system that many (most?) software projects use. Instead of bumping versions because something *feels* like a minor release, or *maybe* it's big enough to be a major release, semver prescribes a set of rules for when to do what.
 
@@ -40,6 +39,4 @@ and
 
 > Version 1.0.0 defines the public API. The way in which the version number is incremented is now dependent on this public API and how it changes.
 
-So in the case of the dependencies I mentioned above, technically anything could change between, say, vows@0.5.2 and vows@0.5.3. It's unlikely, but can't be ruled out.
-
- 
+So in the case of the dependencies I mentioned above, technically anything could change between, say, vows@0.5.2 and vows@0.5.3. It's unlikely, but can't be ruled out. While in <1.0.0, it's not the library author's responsibility to maintain any sort of compatibility because pre 1.0.0 the public API doesn't have to be defined. I think the general point stands, though, that dependencies with no upper bounds, especially in libraries that are widely used, is dangerous.
